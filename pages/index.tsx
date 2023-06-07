@@ -37,7 +37,7 @@ const Home: NextPage = () => {
   //   bio.slice(-1) === "." ? "" : "."
   // }`;
 
-  const prompt = "Can you write me a short customer outreach email that highlights the benefits of Auth0 in terms of social login, progressive profiling and SSO?";
+  const prompt = "Write a short customer outreach email that highlights the benefits of Auth0 in terms of SSO and security for the fintech industry";
 
   const generateBio = async (e: any) => {
     e.preventDefault();
@@ -122,10 +122,7 @@ const Home: NextPage = () => {
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              Copy your current bio{" "}
-              <span className="text-slate-500">
-                (or write a few sentences about yourself)
-              </span>
+              Choose your industry and features
               .
             </p>
           </div>
@@ -151,7 +148,7 @@ const Home: NextPage = () => {
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               onClick={(e) => generateBio(e)}
             >
-              Generate your bio &rarr;
+              Generate your email &rarr;
             </button>
           )}
           {loading && (
@@ -177,7 +174,7 @@ const Home: NextPage = () => {
                   className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
                   ref={bioRef}
                 >
-                  Your generated bios
+                  Your email
                 </h2>
               </div>
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
