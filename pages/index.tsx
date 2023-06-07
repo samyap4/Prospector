@@ -121,7 +121,7 @@ const Home: NextPage = () => {
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              Supply your industry: fintech, ecommerce, insurance, health, real estate, transportation, finserv
+              Supply your industry:
               .
             </p>
           </div>
@@ -131,7 +131,7 @@ const Home: NextPage = () => {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "e.g. Senior Developer Advocate @vercel. Tweeting about web development, AI, and React / Next.js. Writing nutlope.substack.com."
+              "e.g. intech, ecommerce, insurance, health, real estate, transportation, finserv"
             }
           />
           {/* <div className="flex mb-5 items-center space-x-3">
