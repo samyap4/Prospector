@@ -16,8 +16,7 @@ import {
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
-  const [bio, setBio] = useState("");
-  const [vibe, setVibe] = useState<VibeType>("Professional");
+  const [industry, setIndustry] = useState("");
   const [generatedBios, setGeneratedBios] = useState<String>("");
 
   const bioRef = useRef<null | HTMLDivElement>(null);
@@ -37,7 +36,7 @@ const Home: NextPage = () => {
   //   bio.slice(-1) === "." ? "" : "."
   // }`;
 
-  const prompt = "Write a short customer outreach email that highlights the benefits of Auth0 in terms of SSO and security for the fintech industry";
+  const prompt = `"Write a short customer outreach email that highlights the benefits of Auth0 in terms of SSO and security for the ${industry} industry"`;
 
   const generateBio = async (e: any) => {
     e.preventDefault();
@@ -122,13 +121,13 @@ const Home: NextPage = () => {
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              Choose your industry and features
+              Supply your industry: fintech, ecommerce, insurance, health, real estate, transportation, finserv
               .
             </p>
           </div>
           <textarea
-            value={bio}
-            onChange={(e) => setBio(e.target.value)}
+            value={industry}
+            onChange={(e) => setIndustry(e.target.value)}
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
