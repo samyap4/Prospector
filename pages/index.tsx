@@ -122,7 +122,6 @@ const Home: NextPage = () => {
             />
             <p className="text-left font-medium">
               Supply your industry:
-              .
             </p>
           </div>
           <textarea
